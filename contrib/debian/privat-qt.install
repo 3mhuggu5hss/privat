@@ -1,0 +1,6 @@
+usr/local/bin/privat-qt usr/bin
+share/pixmaps/privat32.xpm usr/share/pixmaps
+share/pixmaps/privat16.xpm usr/share/pixmaps
+share/pixmaps/privat128.png usr/share/pixmaps
+debian/privat-qt.desktop usr/share/applications
+debian/privat-qt.protocol usr/share/kde4/services/

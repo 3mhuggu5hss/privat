@@ -1,0 +1,22 @@
+[Unit]
+Description=Privat's distributed currency daemon
+After=network.target
+
+[Service]
+User=privatcore
+Group=privatcore
+
+Type=forking
+PIDFile=/var/lib/privatd/privatd.pid
+ExecStart=/usr/bin/privatd -daemon -pid=/var/lib/privatd/privatd.pid \
+-conf=/etc/privatcore/privat.conf -datadir=/var/lib/privatd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
